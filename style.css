@@ -126,7 +126,7 @@ body {
   .romantic-message {
     font-size: 1.8rem;
     margin-top: 20px;
-    color: #fff;
+    color: #560202;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: floatMessage 3s infinite ease-in-out;
   }
@@ -239,3 +239,17 @@ body {
       font-size: 1.5rem;
     }
   }
+
+ 
+/* For mobile screens */
+@media (max-width: 768px) {
+    .swal2-popup.responsive-popup {
+        width: 90% !important; /* Adjust width on mobile */
+        padding: 10px !important; /* Reduce padding */
+    }
+
+    .swal2-title.responsive-title,
+    .swal2-content.responsive-content {
+        font-size: 1rem !important; /* Make font smaller for mobile */
+    }
+}

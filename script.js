@@ -114,7 +114,13 @@ window.onload = function () {
         url("https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif")
         center center
         no-repeat
-      `
+      `,
+      customClass: {
+        popup: 'responsive-popup', 
+        title: 'responsive-title',
+        content: 'responsive-content',
+        confirmButton: 'responsive-btn',
+    }
     }).then(() => {
       restartGame();
     });
@@ -135,10 +141,16 @@ window.onload = function () {
         title: '💖 Love Note 💖',
         html: `
           <p>${note}</p>
-          <img src="https://cdn.pixabay.com/animation/2022/08/23/03/32/03-32-04-108_512.gif" style="width: 100px; height: 100px; margin-top: 10px;">
+          <img src="img/gif1.gif" style="width: 100px; height: 100px; margin-top: 10px;">
         `,
         confirmButtonText: 'Aww, Thank You!',
         backdrop: `rgba(255, 51, 102, 0.4)`,
+        customClass: {
+          popup: 'responsive-popup',
+          title: 'responsive-title',
+          content: 'responsive-content',
+          confirmButton: 'responsive-btn',
+      }
       });
     }, 500);
   }
@@ -154,16 +166,22 @@ window.onload = function () {
   function showHeartSurprise() {
     heartSurprise.style.display = "block";
     setTimeout(() => {
-      heartSurprise.style.display = "none";
-      Swal.fire({
-        title: '🎉 You Won! 🎉',
-        html: `
-          <p>You've captured my heart! 💖</p>
-          <p>You're my Valentine! 💕</p>
-          <img src="https://cdn.pixabay.com/animation/2022/08/23/03/32/03-32-04-108_512.gif" style="width: 100px; height: 100px; margin-top: 10px;">
-        `,
-        confirmButtonText: 'Yay! 💖',
-        backdrop: `rgba(255, 51, 102, 0.4)`,
-      });
+        heartSurprise.style.display = "none";
+        Swal.fire({
+            title: '🎉 You Won! 🎉',
+            html: `
+                <p>You've captured my heart! 💖</p>
+                <p>You're my Valentine! 💕</p>
+                <img src="img/gif2.gif" style="width: 100px; height: 100px; margin-top: 10px;">
+            `,
+            confirmButtonText: 'Yay! 💖',
+            backdrop: `rgba(255, 51, 102, 0.4)`,
+            customClass: {
+                popup: 'responsive-popup', 
+                title: 'responsive-title',
+                content: 'responsive-content',
+                confirmButton: 'responsive-btn',
+            }
+        });
     }, 5000);
-  }
+}
